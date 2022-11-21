@@ -1,0 +1,31 @@
+[Mon Nov 07 09:16:15.784937 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51438] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/dashboard
+[Mon Nov 07 09:16:15.979756 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51438] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/favicon.ico, referer: http://localhost/dashboard/
+[Mon Nov 07 09:16:22.782767 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51439] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:19:39.413676 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51489] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:19:39.514820 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51489] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/favicon.ico, referer: http://localhost/
+[Mon Nov 07 09:19:40.295919 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51490] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:19:40.905200 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51490] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:20:03.889624 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51492] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:20:23.554566 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51510] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:20:26.191336 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51510] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:21:39.820184 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51518] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:22:02.408839 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51521] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:22:04.193923 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51521] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:22:04.881599 2022] [authz_core:error] [pid 4420:tid 2016] [client 127.0.0.1:51521] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:22:35.183910 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51531] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:22:40.708833 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51533] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:22:58.620049 2022] [authz_core:error] [pid 512:tid 2024] [client 127.0.0.1:51544] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:23:14.778044 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51565] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:23:58.959908 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51570] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:23:59.729247 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51570] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:24:24.931016 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51574] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:24:25.660423 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51574] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:24:43.208476 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51575] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:24:44.191624 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51575] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:25:11.808022 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51577] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:25:12.644402 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51577] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:25:41.726081 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51586] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:25:57.067122 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51589] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:27:53.080805 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51605] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:28:07.786305 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51611] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
+[Mon Nov 07 09:28:08.616726 2022] [authz_core:error] [pid 512:tid 2028] [client 127.0.0.1:51611] AH01630: client denied by server configuration: C:/xampp/www/serverside/public_html/
