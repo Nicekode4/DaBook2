@@ -51,6 +51,11 @@ class Song {
             'content' => array($this->content, PDO::PARAM_STR),
             'artist_id' => array($this->artist_id, PDO::PARAM_INT)
         );
+
+        $sql = "INSERT INTO song(title, content, artist_id)
+        VALUES(:title, :content, :artist_id)";
+        $this->db->query($sql, $params);
+        return $this->db->lastInsertId();
     }
 }
 ?>

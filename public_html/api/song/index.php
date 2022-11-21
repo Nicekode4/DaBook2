@@ -23,7 +23,7 @@ Route::add('/api/song/', function() {
 	$song->artist_id = isset($_POST['artist_id']) && !empty($_POST['artist_id']) ? (int)$_POST['artist_id'] : null;
 
     if ($song->title && $song->content && $song->artist_id) {
-        echo $song-create();
+        echo $song->create();
     }else {
         echo "Kan ikke oprette sang";
     }
