@@ -26,5 +26,29 @@ class Song {
                 ORDER BY title";
                 return $this->db->query($sql);
      }
+
+     
+	/**
+	 * Funktion til at hente detaljer med
+	 */
+    public function details($id) {
+        $params = array(
+            'id' => array($id, PDO::PARAM_INT)
+        );
+
+        $sql = "SELECT title, content, name, artist_id 
+        FROM song
+        JOIN artist
+        ON song.artist_id = artist.id
+        WHERE song.id = :id";
+        return $this->db->query($sql, $params, Db::RESULT_SINGLE);
+    }
+
+    //Create a song
+    public function create() {
+        $params = array(
+            
+        )
+    }
 }
 ?>

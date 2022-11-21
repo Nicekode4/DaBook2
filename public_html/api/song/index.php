@@ -10,7 +10,7 @@ Route::add('/api/song/ge', function() {
 });
 
 //Get specific song
-Route::add('/api/song/', functon($id) {
+Route::add('/api/song/([0-9]*)', function($id) {
     $song = new Song;
     $result = $song->details($id);
     echo Tools::jsonParser($result);
