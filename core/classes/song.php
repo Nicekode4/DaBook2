@@ -47,8 +47,10 @@ class Song {
     //Create a song
     public function create() {
         $params = array(
-            
-        )
+            'title' => array($this->title, PDO::PARAM_STR),
+            'content' => array($this->content, PDO::PARAM_STR),
+            'artist_id' => array($this->artist_id, PDO::PARAM_INT)
+        );
     }
 }
 ?>
