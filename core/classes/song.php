@@ -57,5 +57,22 @@ class Song {
         $this->db->query($sql, $params);
         return $this->db->lastInsertId();
     }
+
+    //Change a song
+    public function update() {
+        $params = array(
+            'id' => array($this->id, PDO::PARAM_INT),
+            'title' => array($this->title, PDOPARAM_STR),
+            'content' => array($this->content, PDO::PARAM_STR),
+            'artist_id' => array($this->artist_id, PDO::PARAM_INT)
+        );
+
+        $sql = "UPDATE song SET
+                        title = :title,
+                        content = :content,
+                        artist_id = :artist:id
+                        WHERE id = :id";
+                        return $this->db->query($sql, $params);
+    }
 }
 ?>
