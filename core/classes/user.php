@@ -17,9 +17,8 @@ class User {
 	 */
 
      public function list() {
-        $sql = "SELECT id, title
-                FROM song
-                ORDER BY title";
+        $sql = "SELECT username
+                FROM users";
                 return $this->db->query($sql);
      }
 
@@ -32,24 +31,21 @@ class User {
             'id' => array($id, PDO::PARAM_INT)
         );
 
-        $sql = "SELECT title, content, name, artist_id 
-        FROM song
-        JOIN artist
-        ON song.artist_id = artist.id
-        WHERE song.id = :id";
+        $sql = "SELECT *
+        FROM users
+        WHERE id = :id";
         return $this->db->query($sql, $params, Db::RESULT_SINGLE);
     }
 
     //Create a song
     public function create() {
         $params = array(
-            'title' => array($this->title, PDO::PARAM_STR),
-            'content' => array($this->content, PDO::PARAM_STR),
-            'artist_id' => array($this->artist_id, PDO::PARAM_INT)
+            'username' => array($this->username, PDO::PARAM_STR),
+            'password' => array($this->password, PDO::PARAM_STR),
         );
 
-        $sql = "INSERT INTO song(title, content, artist_id)
-        VALUES(:title, :content, :artist_id)";
+        $sql = "INSERT INTO users(username, password)
+        VALUES(:username, :password)";
         $this->db->query($sql, $params);
         return $this->db->lastInsertId();
     }
@@ -58,31 +54,30 @@ class User {
     public function update() {
         $params = array(
             'id' => array($this->id, PDO::PARAM_INT),
-            'title' => array($this->title, PDO::PARAM_STR),
-            'content' => array($this->content, PDO::PARAM_STR),
-            'artist_id' => array($this->artist_id, PDO::PARAM_INT)
+            'username' => array($this->username, PDO::PARAM_STR),
+            'password' => array($this->password, PDO::PARAM_STR)
         );
 
-        $sql = "UPDATE song SET
-                        title = :title,
-                        content = :content,
-                        artist_id = :artist_id
+        $sql = "UPDATE users SET
+                        username = :username,
+                        password = :password,
+                        id = :id
                         WHERE id = :id";
                         return $this->db->query($sql, $params);
     }
 //Delete song
     public function delete($id) {
         $params = array(
-            'artist_id' => array($id, PDO::PARAM_INT)
+            'id' => array($id, PDO::PARAM_INT)
 
         );
 
-        $sql = "DELETE FROM song
-        WHERE artist_id = :artist_id";
+        $sql = "DELETE FROM users
+        WHERE id = :id";
 if ($this->db->query($sql, $params) == 1) {
-    echo $id . " in song deleted succesfully ";
+    echo $id . " in users deleted succesfully ";
 } else {
-    echo $id . " could not be deleted in song...";
+    echo $id . " could not be deleted in users...";
 }
 
             //return $this->db->query($sql, $params);

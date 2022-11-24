@@ -17,6 +17,7 @@ Route::add('/api/artist/([0-9]*)', function($id) {
     echo Tools::jsonParser($result);
 });
 
+//opret sang
 Route::add('/api/artist/', function() {
     $artist = new Artist;
     $artist->name = isset($_POST['name']) && !empty($_POST['name']) ? $_POST['name'] : null;
