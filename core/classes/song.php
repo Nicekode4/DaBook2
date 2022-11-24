@@ -75,14 +75,31 @@ class Song {
                         return $this->db->query($sql, $params);
     }
 //Delete song
+    public function deleteA($id) {
+        $params = array(
+            'artist_id' => array($id, PDO::PARAM_INT)
+
+        );
+
+        $sql = "DELETE FROM song
+        WHERE artist_id = :artist_id";
+if ($this->db->query($sql, $params) == 1) {
+    echo $id . " in song deleted succesfully ";
+} else {
+    echo $id . " could not be deleted in song...";
+}
+
+            //return $this->db->query($sql, $params);
+    }
+
     public function delete($id) {
         $params = array(
-            'id' => array($id, PDO::PARAM_INT)
-        );
+			'id' => array($id, PDO::PARAM_INT)
+		);
 
         $sql = "DELETE FROM song
         WHERE id = :id";
         return $this->db->query($sql, $params);
-    }
+	}
 }
 ?>
