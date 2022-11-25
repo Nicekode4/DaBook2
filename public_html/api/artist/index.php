@@ -2,22 +2,21 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/assets/incl/init.php";
 
 
-// Get all songs
-// Get all songs
+// Get all artists
 Route::add('/api/artist/ge', function() {
     $artist = new Artist;
     $result = $artist->list();
     echo Tools::jsonParser($result);
 });
 
-//Get specific song
+//Get specific artist
 Route::add('/api/artist/([0-9]*)', function($id) {
     $artist = new Artist;
     $result = $artist->details($id);
     echo Tools::jsonParser($result);
 });
 
-//opret sang
+//Create a new artist
 Route::add('/api/artist/', function() {
     $artist = new Artist;
     $artist->name = isset($_POST['name']) && !empty($_POST['name']) ? $_POST['name'] : null;
@@ -29,7 +28,7 @@ Route::add('/api/artist/', function() {
     }
 }, 'post');
 
-//update a specific song
+//update a specific artist
 Route::add('/api/artist/', function () {
     $data = file_get_contents("php://input");
     parse_str($data, $parsed_data);
@@ -46,6 +45,7 @@ Route::add('/api/artist/', function () {
     
 }, 'put');
 
+//delete an artist
 Route::add('/api/artist/([0-9]*)', function($id) {
 $artist = new Artist;
 $song = new Song;

@@ -2,20 +2,21 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/assets/incl/init.php";
 
 
-// Get all songs
+// Get all usernames
 Route::add('/api/users/', function() {
     $user = new User;
     $result = $user->list();
     echo Tools::jsonParser($result);
 });
 
-//Get specific song
+//Get specific user
 Route::add('/api/users/([0-9]*)', function($id) {
     $user = new User;
     $result = $user->details($id);
     echo Tools::jsonParser($result);
 });
 
+//create a new user
 Route::add('/api/users/', function() {
     $user = new User;
     $user->username = isset($_POST['username']) && !empty($_POST['username']) ? $_POST['username'] : null;
@@ -28,7 +29,7 @@ Route::add('/api/users/', function() {
     }
 }, 'post');
 
-//update a specific song
+//update a specific user
 Route::add('/api/users/', function () {
     $data = file_get_contents("php://input");
     parse_str($data, $parsed_data);
@@ -46,6 +47,7 @@ Route::add('/api/users/', function () {
     
 }, 'put');
 
+//deletes a user
 Route::add('/api/users/([0-9]*)', function($id) {
 $user = new User;
 

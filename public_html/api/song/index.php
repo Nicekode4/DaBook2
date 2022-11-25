@@ -3,7 +3,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/assets/incl/init.php";
 
 
 // Get all songs
-Route::add('/api/song/ge', function() {
+Route::add('/api/song/', function() {
     $song = new Song;
     $result = $song->list();
     echo Tools::jsonParser($result);
@@ -16,6 +16,7 @@ Route::add('/api/song/([0-9]*)', function($id) {
     echo Tools::jsonParser($result);
 });
 
+//create a new song
 Route::add('/api/song/', function() {
     $song = new Song;
     $song->title = isset($_POST['title']) && !empty($_POST['title']) ? $_POST['title'] : null;
@@ -48,6 +49,7 @@ Route::add('/api/song/', function () {
     
 }, 'put');
 
+//deletes a song
 Route::add('/api/song/([0-9]*)', function($id) {
 $song = new Song;
 
